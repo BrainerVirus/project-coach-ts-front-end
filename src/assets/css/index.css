@@ -1,0 +1,128 @@
+:root {
+	--step--2: clamp(0.87rem, calc(0.79rem + 0.41vw), 1.28rem);
+	--step--1: clamp(1.04rem, calc(0.93rem + 0.56vw), 1.6rem);
+	--step-0: clamp(1.25rem, calc(1.1rem + 0.75vw), 2rem);
+	--step-1: clamp(1.5rem, calc(1.3rem + 1vw), 2.5rem);
+	--step-2: clamp(1.8rem, calc(1.54rem + 1.33vw), 3.13rem);
+	--step-3: clamp(2.16rem, calc(1.81rem + 1.75vw), 3.91rem);
+	--step-4: clamp(2.59rem, calc(2.13rem + 2.29vw), 4.88rem);
+	--step-5: clamp(3.11rem, calc(2.51rem + 2.99vw), 6.1rem);
+
+	font-family: 'Kanit', 'Libre Baskerville', serif;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+
+	color-scheme: light dark;
+	color: white;
+	background-color: #242424;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		background-color: theme(colors.primary);
+	}
+
+	h1 {
+		font-size: var(--step-5);
+	}
+
+	h2 {
+		font-size: var(--step-2);
+	}
+
+	p {
+		font-size: var(--step--0);
+	}
+
+	img {
+		max-width: 100%;
+	}
+}
+
+@layer components {
+}
+
+@layer utilities {
+	.flex-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	@media screen(lg) {
+		.nav-item::after {
+			content: '';
+			display: block;
+			width: 0%;
+			height: 2px;
+			background: black;
+			transition: width 0.3s;
+		}
+
+		.nav-item:hover::after {
+			width: 100%;
+		}
+	}
+}
+
+.custom-shape-divider-top-1661229387 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+}
+
+.custom-shape-divider-top-1661229387 svg {
+	position: relative;
+	display: block;
+	width: calc(122% + 1.3px);
+	height: 57px;
+	transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1661229387 .shape-fill {
+	fill: #140c36b9;
+}
+
+.custom-shape-divider-bottom-1661229558 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1661229558 svg {
+	position: relative;
+	display: block;
+	width: calc(122% + 1.3px);
+	height: 57px;
+	transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1661229558 .shape-fill {
+	fill: #140c36b9;
+}
