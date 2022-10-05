@@ -1,9 +1,11 @@
+//React imports
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
+//Assets imports
 import './assets/css/App.css';
+//Components imports
+import Home from './pages/Home';
 import Navbar from './layouts/Navbar';
 import Footer from './layouts/Footer';
-import { useState } from 'react';
 
 enum NavLinks {
 	Inicio,
@@ -12,12 +14,7 @@ enum NavLinks {
 	Coaching,
 }
 
-interface Props {
-	ActiveNavLink: NavLinks;
-}
-
 function App() {
-	const [navLinkIsActive, setNavLinkIsActive] = useState();
 	return (
 		<div className='App'>
 			<BrowserRouter>
