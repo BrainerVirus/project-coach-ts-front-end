@@ -68,6 +68,10 @@
 		align-items: center;
 	}
 
+	.flip {
+		transform: rotateY(180deg);
+	}
+
 	@media screen(lg) {
 		.nav-item::after {
 			content: '';
